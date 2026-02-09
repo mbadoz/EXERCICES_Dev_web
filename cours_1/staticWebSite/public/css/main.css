@@ -69,14 +69,19 @@ p {
 table {
     margin: 25px auto;
     border-collapse: collapse;
-    width: 85%;
+    width: auto;
+    max-width: 100%;
     background-color: white;
+    table-layout: auto;
 }
 
 table th, table td {
-    padding: 15px 20px;
+    padding: 10px 15px;
     text-align: center;
     border: 1px dotted #ccc;
+    width: auto;
+    word-wrap: break-word;
+    font-size: 14px;
 }
 
 table thead {
