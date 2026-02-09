@@ -1,14 +1,351 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+}
 
 /*I. Attribuer des couleurs aux différentes parties de la page HTML*/
+header {
+    background-color: #07833b;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+section {
+    background-color: #f5f5f5;
+    margin: 15px 0;
+    padding: 40px 50px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+footer {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 13px;
+    margin-top: 20px;
+}
 
 /*II. Centrer tous les éléments*/
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #333;
+}
+
+h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    line-height: 1.6;
+    margin: 10px 0;
+}
 
 /*II.a.centrer le tableau*/
+table {
+    margin: 25px auto;
+    border-collapse: collapse;
+    width: 85%;
+    background-color: white;
+}
+
+table th, table td {
+    padding: 15px 20px;
+    text-align: center;
+    border: 1px dotted #ccc;
+}
+
+table thead {
+    background-color: white;
+    font-weight: 400;
+}
+
+table tbody tr {
+    background-color: white;
+}
 
 /*II.b.Centrer le formulaire*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    border-radius: 0;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form button {
+    padding: 6px 20px;
+    background-color: #e8e8e8;
+    color: #333;
+    border: 1px solid #999;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+form button:hover {
+    background-color: #d8d8d8;
+}
 
 /*III. La barre de navigation*/
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
 
 /*IV. Image*/
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 0;
+}
 
 /*V. Compétences*/
+
+/* Section compétences - conteneur principal */
+section > div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Blocs individuels Web et Data & ML */
+section > div > div {
+    background-color: #f0ead6;
+    padding: 25px 30px;
+    border-radius: 5px;
+    min-width: 400px;
+    text-align: center;
+}
+
+section > div > div h3 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Badges de compétences (spans) */
+section > div > div span {
+    display: inline-block;
+    background-color: #5d5d5d;
+    color: white;
+    padding: 6px 14px;
+    margin: 4px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Anciens sélecteurs pour compatibilité */
+.competences-group {
+    background-color: #f0ead6;
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 450px;
+    border-radius: 5px;
+}
+
+.competences-group h3 {
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+.competences-container label {
+    display: inline-block;
+    background-color: #5d5d5d;
+    color: white;
+    padding: 6px 14px;
+    margin: 4px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.competences-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Styles pour les détails */
+details {
+    margin: 25px auto;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    max-width: 85%;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 400;
+    padding: 12px 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-align: left;
+}
+
+summary::marker {
+    content: '▶ ';
+}
+
+details[open] summary::marker {
+    content: '▼ ';
+}
+
+details ul {
+    margin-top: 15px;
+    margin-left: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+details ul li {
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Styles pour les sections de réseaux */
+section ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+section ul li {
+    margin: 12px 0;
+}
+
+section ul li a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+section ul li a:hover {
+    color: #0052a3;
+}
+
+/* Styles pour blockquote */
+blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 20px auto;
+    padding: 0;
+    border: none;
+    text-align: center;
+    max-width: 80%;
+}
+
+/* Styles pour le code */
+code {
+    display: block;
+    background-color: #fafafa;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    overflow-x: auto;
+    text-align: left;
+}
+
+code pre {
+    margin: 0;
+}
+
+code p {
+    margin: 5px 0;
+    text-align: left;
+}
+
+/* Styles spécifiques pour la localisation */
+section p strong {
+    font-weight: 600;
+}
+
+section p a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+section p a:hover {
+    text-decoration: underline;
+}
