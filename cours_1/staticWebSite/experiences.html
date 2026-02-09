@@ -8,14 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>Mon Parcours</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="experiences.html">Mon Parcours</a></li>
-                <li><a href="contact.html">Me contacter</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <div class="navbar-brand">Marius Badoz</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="experiences.html">Mon Parcours</a></li>
+                    <li><a href="contact.html">Me contacter</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
     <section>
@@ -26,6 +28,7 @@
                     <th>Année</th>
                     <th>Diplôme</th>
                     <th>Établissement</th>
+                    <th class="hide-mobile">Mention</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,16 +36,19 @@
                     <td>2023-2025</td>
                     <td>Spécialisation Data Science</td>
                     <td>EFREI</td>
+                    <td class="hide-mobile">Très Bien</td>
                 </tr>
                 <tr>
                     <td>2022-2023</td>
                     <td>Master 1 Computer Science</td>
                     <td>Oxford</td>
+                    <td class="hide-mobile">Distinction</td>
                 </tr>
                 <tr>
                     <td>2019-2022</td>
                     <td>Prépa intégrée et Cycle Ingénieur</td>
                     <td>EFREI</td>
+                    <td class="hide-mobile">Bien</td>
                 </tr>
             </tbody>
         </table>
@@ -73,6 +79,32 @@
         
         <h3>2023 - Stage Assistant Chercheur : FAIR</h3>
         <p>Recherche sur systèmes de ML à architecture JEPA</p>
+    </section>
+    
+    <section>
+        <h2>💼 Projets</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Portfolio Personnel</h3>
+                <p>Site web personnel développé en HTML, CSS et JavaScript moderne avec design responsive et animations.</p>
+                <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript, Grid, Flexbox</p>
+            </div>
+            <div class="project-card">
+                <h3>Application ML</h3>
+                <p>Application d'apprentissage automatique pour la classification d'images.</p>
+                <p><strong>Technologies:</strong> Python, PyTorch, TensorFlow</p>
+            </div>
+            <div class="project-card">
+                <h3>Dashboard Analytics</h3>
+                <p>Tableau de bord interactif pour visualiser des données en temps réel.</p>
+                <p><strong>Technologies:</strong> React, D3.js, PostgreSQL</p>
+            </div>
+            <div class="project-card">
+                <h3>API REST</h3>
+                <p>API RESTful pour gestion de données avec documentation complète.</p>
+                <p><strong>Technologies:</strong> Node.js, Express, MongoDB</p>
+            </div>
+        </div>
     </section>
     
     <footer>
