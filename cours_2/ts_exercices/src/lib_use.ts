@@ -62,7 +62,7 @@ Dans VSCode ou votre IDE :
 // ============================================================================
 // 2. UTILISATION DE LODASH AVEC TYPESCRIPT
 // ============================================================================
-
+/*
 console.log("--- 2. Utilisation de Lodash avec TypeScript ---\n");
 
 import _ from 'lodash';
@@ -310,7 +310,7 @@ npm install axios
 
 Axios inclut ses propres types TypeScript, pas besoin de @types/axios
 */
-
+/*
 import axios, { AxiosResponse, AxiosError } from 'axios';
 
 // 5.1. Interface pour la réponse API
@@ -398,7 +398,7 @@ Le système doit permettre :
 3. Calculer des statistiques (prix moyen, âge moyen)
 4. Gérer les dates d'achat et de révision
 */
-
+/*
 interface CarManagement {
     id: number;
     brand: string;
@@ -537,4 +537,4 @@ console.log("  • axios - Requêtes HTTP (bonus)");
 console.log("\n🔍 Pour aller plus loin:");
 console.log("  • Explorez DefinitelyTyped (github.com/DefinitelyTyped)");
 console.log("  • Créez vos propres fichiers .d.ts pour des librairies sans types");
-console.log("  • Utilisez des génériques pour créer des helpers réutilisables");
+console.log("  • Utilisez des génériques pour créer des helpers réutilisables");*/

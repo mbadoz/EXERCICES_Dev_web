@@ -1,0 +1,25 @@
+{
+  "name": "exercices_dev_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbadoz/EXERCICES_Dev_web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbadoz/EXERCICES_Dev_web/issues"
+  },
+  "homepage": "https://github.com/mbadoz/EXERCICES_Dev_web#readme",
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
