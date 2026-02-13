@@ -40,3 +40,48 @@
 .read-the-docs {
   color: #888;
 }
+
+#tab-content {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #1b1b1f;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  animation: fadeIn 0.5s ease-out;
+}
+
+#tab-content h3 {
+  margin-top: 0;
+  color: #646cff;
+  font-size: 1.5rem;
+}
+
+#tab-content p {
+  color: #ebebf599;
+  line-height: 1.6;
+}
+
+#tab-content pre {
+  background-color: #2e2e32;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid #3e3e42;
+}
+
+#tab-content code {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  color: #646cff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

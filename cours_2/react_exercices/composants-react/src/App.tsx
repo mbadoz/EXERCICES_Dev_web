@@ -1,27 +1,23 @@
-import { type FC } from 'react'
+import { useState, type FC } from 'react'
 import './App.css'
+import Header from './component/header'
+import Main from './component/main'
+
+
+
 
 const App: FC = () => {
+  const [selectedTab, setSelectedTab] = useState("empty");
+
+  function handleSelect(selectedButton: string) {
+    setSelectedTab(selectedButton);
+  }
 
   return (
     <div>
-      <header>
-          <img src="src/assets/react.svg" className="logo react" alt="React logo" />
-          <h1>Bienvenue sur mon app React</h1>
-          <h2>Cette page utilise React</h2>
-        </header>
-      <main>
-        <section>
-          <h2>À propos</h2>
-          <p>Dans cet exercice nous allons jouer avec le principe de composant.</p>
-          <p>Les composants sont très utiles dans le développement web moderne.</p>
-        </section>
-
-        <section>
-          <h2>A la fin de ce cours</h2>
-          <p>Le JSX et les composants n'auront plus aucun secrets pour vous !</p>
-        </section>  
-      </main>
+      <Header />
+      <Main onSelect={handleSelect} selectedTab={selectedTab} />
+      {selectedTab}
     </div>  
   )
 }
