@@ -1,9 +1,14 @@
-
-const Input = () => {
-    // return a <textarea> if a richText prop is true
-    // return an <input> otherwise
-    // forward / set the received props on the returned elements
+interface InputProps {
+    richText?: boolean;
+    type?: string;
+    placeholder: string;
+}
+const Input = ({ richText, type, placeholder }: InputProps) => {
+    return (
+        <>
+            {richText ? <textarea placeholder={placeholder} /> : <input type={type} placeholder={placeholder} />}
+        </>
+    )
 
 }
-
 export default Input;
