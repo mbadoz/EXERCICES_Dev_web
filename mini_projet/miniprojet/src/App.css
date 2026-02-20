@@ -1,0 +1,206 @@
+/* ===========================
+   BASE — Mobile first (< 768px)
+   =========================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #2d3748;
+  padding: 16px;
+}
+
+/* --- Titres --- */
+h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  margin-bottom: 16px;
+  border-left: 4px solid #2b6cb0;
+  padding-left: 10px;
+}
+
+/* --- Conteneur carte --- */
+div {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto 20px auto; /* centrage horizontal */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;              /* empêche la carte de s'élargir au-delà de l'écran */
+  overflow: hidden;         /* confine le contenu, laisse .table-wrapper gérer son scroll */
+}
+
+/* --- Formulaire --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+  color: #4a5568;
+  margin-top: 4px;
+}
+
+/* Checkboxes alignées */
+input[type="checkbox"] {
+  accent-color: #2b6cb0;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* Inputs numériques */
+input[type="number"] {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  background-color: #f7fafc;
+  transition: border-color 0.2s;
+  outline: none;
+  color: #2d3748;
+}
+
+input[type="number"]:focus {
+  border-color: #2b6cb0;
+  background-color: #ebf4ff;
+}
+
+/* Bouton */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2b6cb0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: #2c5282;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Message d'erreur */
+p[style] {
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Wrapper scrollable pour le tableau sur mobile */
+.table-wrapper {
+  overflow-x: auto;
+  overflow-y: visible;               /* annule le overflow: hidden du div parent */
+  -webkit-overflow-scrolling: touch; /* scroll fluide sur iOS */
+  width: 100%;                       /* occupe toute la largeur disponible */
+  box-shadow: none;                  /* pas de double ombre */
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+/* --- Tableau --- */
+table {
+  width: 100%;
+  /* min-width géré dynamiquement dans tableau.tsx selon le nombre d'objectifs */
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+thead {
+  background-color: #2b6cb0;
+  color: #fff;
+}
+
+th {
+  padding: 10px 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Ligne alternée */
+tbody tr:nth-child(even) {
+  background-color: #ebf4ff;
+}
+
+tbody tr:hover {
+  background-color: #bee3f8;
+  transition: background-color 0.15s;
+}
+
+/* ===========================
+   Tablette (>= 768px)
+   =========================== */
+
+@media (min-width: 768px) {
+  body {
+    padding: 32px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  form {
+    max-width: 500px;
+  }
+
+  input[type="number"] {
+    width: auto;
+  }
+
+  table {
+    font-size: 1rem;
+  }
+
+  th, td {
+    padding: 12px 14px;
+  }
+}
+
+/* ===========================
+   PC (>= 1024px)
+   =========================== */
+
+@media (min-width: 1024px) {
+  body {
+    padding: 48px;
+  }
+
+  div {
+    max-width: 900px; /* les cartes se centrent, pas le body */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  form {
+    max-width: 600px;
+  }
+}
