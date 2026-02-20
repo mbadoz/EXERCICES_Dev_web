@@ -4,6 +4,23 @@ Application React qui génère un tableau des besoins journaliers en protéines 
 
 ---
 
+## Prérequis
+
+Ce projet nécessite **Node.js version 18 ou supérieure** (recommandé : Node 20 LTS).
+
+**Vérifier si Node est déjà installé**
+```bash
+node -v
+```
+
+**Si Node n'est pas installé**
+
+1. Aller sur [https://nodejs.org](https://nodejs.org)
+2. Télécharger la version **LTS** (Long Term Support)
+3. Suivre l'installateur — `npm` est inclus automatiquement
+
+---
+
 ## Récupérer le projet
 
 **Option 1 — Cloner avec Git**
